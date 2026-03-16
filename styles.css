@@ -1,0 +1,27 @@
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: Avenir, Helvetica, sans-serif;
+  background-color: gray;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
