@@ -1,6 +1,7 @@
 const frameElem = document.getElementById('google-slides-iframe');
 const params = new URLSearchParams(document.location.search);
-const slideDuration = 7000;
+const autoPlay = (params.get("auto-play") === 'true');
+const slideDuration = params.get("slide-duration") || 5000;
 
 const presentationId = `1FGLyRgIRlXaOdxa80KfoXJEbW2uRzYwAMNYo6CBS-IQ`;
 const apiKey = 'AIzaSyCaP7wotYiSvym_sQO0VDSfq1GgVmrMUQw';
@@ -8,7 +9,6 @@ const slidesURL = 'https://docs.google.com/presentation/d/e/2PACX-1vS_LeQpzmuW-7
 const pdfUrl = `https://docs.google.com/presentation/d/${presentationId}/export/pdf`;
 
 (async function main() {
-  const autoPlay = (params.get("auto-play") === 'true');
 
   if (autoPlay) {
     loadFrameAuto();
